@@ -1,5 +1,6 @@
-
 .business-card {
+    display: flex;
+    flex-direction: row;
     max-width: 1127px;
     height: 595px;
     /*Размещение по центру страницы*/
@@ -15,27 +16,53 @@ h1 {
     color: #FFFFFF;
 }
 
-.additional-info {
-    display: flex;
-    justify-content: left, top;
-
-}
-
 .main-info {
     display: flex;
-    justify-content: right;
-    max-width: 66%;
-    height: 595px;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+    width: 66%;
     background: #222222;
-    /*margin-left: 380px;*/
 }
 
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 44%;
+}
 
 section {
     color: #FFFFFF;
 }
 
+.name-surname {
+    font-weight: bold;
+    position:relative;
+    top: 15%;
+}
+
+.profession {
+    position:relative;
+    top: 15%;
+}
+
+.download {
+    position:relative;
+    top: 15%;
+}
+
+.avatar {
+    position:relative;
+    top: 15%;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
 footer {
+    position: absolute;
+    bottom: 3%;
     color: #FFFFFF;
 }
 
