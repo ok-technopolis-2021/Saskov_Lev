@@ -1,0 +1,41 @@
+
+.business-card {
+    max-width: 1127px;
+    height: 595px;
+    /*Размещение по центру страницы*/
+    margin: 0px auto;
+    background: #444444;
+    border-radius: 30px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: left, top;
+
+}
+
+.main-info {
+    display: flex;
+    justify-content: right;
+    max-width: 66%;
+    height: 595px;
+    background: #222222;
+    /*margin-left: 380px;*/
+}
+
+
+section {
+    color: #FFFFFF;
+}
+
+footer {
+    color: #FFFFFF;
+}
+
