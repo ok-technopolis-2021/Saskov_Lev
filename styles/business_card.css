@@ -1,3 +1,7 @@
+body {
+    color: #FFFFFF;
+}
+
 .business-card {
     display: flex;
     flex-direction: row;
@@ -25,63 +29,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 44%;
-}
-
-h1 {
-    color: #FFFFFF;
-}
-
-section {
-    color: #FFFFFF;
+    width: 34%;
 }
 
 .avatar {
     position:relative;
-    top: 15%;
+    top: 12%;
     border-radius: 50%;
     width: 180px;
     height: 180px;
+    background-image: url("../res/avatar_cutted.png");
+    background-size: cover;
     box-shadow: 10px 10px 3px 3px rgb(93,93,93);
 }
 
-.main-info .name_surname {
+.main-info__name_surname {
     position: relative;
-    top: 35%;
+    top: 34%;
     font-size: 62px;
     font-weight: bold;
 }
 
-.main-info .profession {
+.main-info__profession {
     position: relative;
-    top: 30%;
+    top: 28%;
     font-size: 22px;
 }
 
-.additional-info .name_surname {
+.additional-info__name_surname {
     position: relative;
-    top: 18%;
+    top: 17%;
     font-size: 38px;
     font-weight: bold;
 }
 
-.additional-info .profession {
+.additional-info__profession {
     position: relative;
-    top: 20%;
+    top: 18%;
     font-size: 20px;
 }
 
 .button_download {
-    position: relative;
-    top: 20%;
     background: #444444;
-    width: 34%;
-    height: 8%;
     border: 3px solid #FFFFFF;
     border-radius: 40px;
-}
-
-.button_download_name {
+    color: #FFFFFF;
+    position: relative;
+    top: 19%;
+    width: 43%;
+    height: 7.6%;
     font-size: 17px;
 }
 
@@ -89,7 +85,7 @@ section {
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 18%;
+    top: 15%;
 }
 
 .circle {
@@ -104,6 +100,5 @@ section {
 footer {
     position: relative;
     top: 30%;
-    color: #FFFFFF;
     font-size: 14px;
 }
