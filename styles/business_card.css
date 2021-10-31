@@ -40,14 +40,6 @@
     background: var(--bg-main-info);
 }
 
-/*.main-info_theme_dark {*/
-/*    background: var(--bg-color-main-info);*/
-/*}*/
-
-/*.main-info_theme_light {*/
-/*    background: var(--bg-color-main-info);*/
-/*}*/
-
 .additional-info {
     display: flex;
     flex-direction: column;
@@ -65,14 +57,6 @@
     background-size: cover;
     box-shadow: 10px 10px 3px 3px var(--shadow-color-avatar);
 }
-
-/*.avatar_theme_light {*/
-/*    box-shadow: 10px 10px 3px 3px var(--shadow-color-avatar);*/
-/*}*/
-
-/*.avatar_theme_dark {*/
-/*    box-shadow: 10px 10px 3px 3px rgb(93, 93, 93);*/
-/*}*/
 
 .main-info__name-surname {
     position: relative;
@@ -112,16 +96,6 @@
     background: var(--bg-button-download);
 }
 
-/*.button-download_theme_dark {*/
-/*    color: #FFFFFF;*/
-/*    background: #444444;*/
-/*}*/
-
-/*.button-download_theme_light {*/
-/*    color: rgb(10, 10, 10);*/
-/*    background: RGB(220, 220, 220);*/
-/*}*/
-
 .circles {
     display: flex;
     flex-direction: row;
@@ -138,14 +112,6 @@
     margin-inline-end: 6px;
     background: var(--bg-circle);
 }
-
-/*.circles__circle_theme_light {*/
-/*    background: RGB(220, 220, 220);*/
-/*}*/
-
-/*.circles__circle_theme_dark {*/
-/*    background: #C4C4C4;*/
-/*}*/
 
 footer {
     position: relative;
