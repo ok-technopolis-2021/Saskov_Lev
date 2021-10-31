@@ -14,11 +14,21 @@
 .business-card_theme_light {
     background: silver;
     color: rgb(10,10,10);
+    --bg-main-info: RGB(220, 220, 220);
+    --shadow-color-avatar: rgb(220, 220, 220);
+    --color-button-download: rgb(10, 10, 10);
+    --bg-button-download: RGB(220, 220, 220);
+    --bg-circle: RGB(220, 220, 220);
 }
 
 .business-card_theme_dark {
     background: #444444;
     color: #FFFFFF;
+    --bg-main-info: #222222;
+    --shadow-color-avatar: rgb(93, 93, 93);
+    --color-button-download: #FFFFFF;
+    --bg-button-download: #444444;
+    --bg-circle: #C4C4C4;
 }
 
 .main-info {
@@ -27,16 +37,16 @@
     border-radius: 30px;
     align-items: center;
     width: 66%;
-    background: #222222;
+    background: var(--bg-main-info);
 }
 
-.main-info_theme_dark {
-    background: #222222;
-}
+/*.main-info_theme_dark {*/
+/*    background: var(--bg-color-main-info);*/
+/*}*/
 
-.main-info_theme_light {
-    background: RGB(220, 220, 220);
-}
+/*.main-info_theme_light {*/
+/*    background: var(--bg-color-main-info);*/
+/*}*/
 
 .additional-info {
     display: flex;
@@ -53,15 +63,16 @@
     height: 180px;
     background-image: url("../res/avatar_cutted.png");
     background-size: cover;
+    box-shadow: 10px 10px 3px 3px var(--shadow-color-avatar);
 }
 
-.avatar_theme_light {
-    box-shadow: 10px 10px 3px 3px rgb(220, 220, 220);
-}
+/*.avatar_theme_light {*/
+/*    box-shadow: 10px 10px 3px 3px var(--shadow-color-avatar);*/
+/*}*/
 
-.avatar_theme_dark {
-    box-shadow: 10px 10px 3px 3px rgb(93, 93, 93);
-}
+/*.avatar_theme_dark {*/
+/*    box-shadow: 10px 10px 3px 3px rgb(93, 93, 93);*/
+/*}*/
 
 .main-info__name-surname {
     position: relative;
@@ -97,17 +108,19 @@
     width: 43%;
     height: 7.6%;
     font-size: 17px;
+    color: var(--color-button-download);
+    background: var(--bg-button-download);
 }
 
-.button-download_theme_dark {
-    color: #FFFFFF;
-    background: #444444;
-}
+/*.button-download_theme_dark {*/
+/*    color: #FFFFFF;*/
+/*    background: #444444;*/
+/*}*/
 
-.button-download_theme_light {
-    color: rgb(10, 10, 10);
-    background: RGB(220, 220, 220);
-}
+/*.button-download_theme_light {*/
+/*    color: rgb(10, 10, 10);*/
+/*    background: RGB(220, 220, 220);*/
+/*}*/
 
 .circles {
     display: flex;
@@ -123,15 +136,16 @@
     border-radius: 50%;
     margin-inline-start: 6px;
     margin-inline-end: 6px;
+    background: var(--bg-circle);
 }
 
-.circles__circle_theme_light {
-    background: RGB(220, 220, 220);
-}
+/*.circles__circle_theme_light {*/
+/*    background: RGB(220, 220, 220);*/
+/*}*/
 
-.circles__circle_theme_dark {
-    background: #C4C4C4;
-}
+/*.circles__circle_theme_dark {*/
+/*    background: #C4C4C4;*/
+/*}*/
 
 footer {
     position: relative;
