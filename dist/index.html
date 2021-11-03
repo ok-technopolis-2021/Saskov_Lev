@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Business card</title>
-    <link rel="stylesheet" href="./styles/business_card.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- endinject -->
 </head>
 <body>
 <div class="business-card business-card_theme_light">
@@ -28,23 +30,9 @@
         <section class="main-info__profession">Web Designer</section>
     </div>
 </div>
+
+<!-- inject:js -->
+<script src="./app.js"></script>
+<!-- endinject -->
 </body>
-<script>
-    function changeBusinessCardTheme(businessCard) {
-        const bcClasses = businessCard.getAttribute("class");
-
-        if (bcClasses.includes("business-card_theme_light")) {
-            const bcDark = bcClasses.replace("business-card_theme_light", "business-card_theme_dark");
-            businessCard.setAttribute("class", bcDark);
-        } else if (bcClasses.includes("business-card_theme_dark")) {
-            const bcLight = bcClasses.replace("business-card_theme_dark", "business-card_theme_light");
-            businessCard.setAttribute("class", bcLight);
-        }
-    }
-
-    const businessCard = document.getElementsByClassName("business-card")[0];
-    businessCard.onclick = function () {
-        changeBusinessCardTheme(this);
-    }
-</script>
 </html>
