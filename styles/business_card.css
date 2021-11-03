@@ -1,0 +1,104 @@
+body {
+    color: #FFFFFF;
+}
+
+.business-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 1127px;
+    height: 595px;
+    /*Размещение по центру страницы*/
+    margin: 0px auto;
+    background: #444444;
+    border-radius: 30px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+    width: 66%;
+    background: #222222;
+}
+
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 34%;
+}
+
+.avatar {
+    position:relative;
+    top: 12%;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background-image: url("../res/avatar_cutted.png");
+    background-size: cover;
+    box-shadow: 10px 10px 3px 3px rgb(93,93,93);
+}
+
+.main-info__name_surname {
+    position: relative;
+    top: 34%;
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.main-info__profession {
+    position: relative;
+    top: 28%;
+    font-size: 22px;
+}
+
+.additional-info__name_surname {
+    position: relative;
+    top: 17%;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.additional-info__profession {
+    position: relative;
+    top: 18%;
+    font-size: 20px;
+}
+
+.button_download {
+    background: #444444;
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
+    color: #FFFFFF;
+    position: relative;
+    top: 19%;
+    width: 43%;
+    height: 7.6%;
+    font-size: 17px;
+}
+
+.circles {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 15%;
+}
+
+.circle {
+    background: #C4C4C4;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-inline-start: 6px;
+    margin-inline-end: 6px;
+}
+
+footer {
+    position: relative;
+    top: 30%;
+    font-size: 14px;
+}
