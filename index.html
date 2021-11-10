@@ -42,9 +42,11 @@
         }
     }
 
-    const businessCard = document.getElementsByClassName("business-card")[0];
-    businessCard.onclick = function () {
-        changeBusinessCardTheme(this);
-    }
+    const businessCard = document.querySelector(".business-card");
+    document.addEventListener("DOMContentLoaded", function(event) {
+        businessCard.onclick = function () {
+            changeBusinessCardTheme(this);
+        }
+    });
 </script>
 </html>
