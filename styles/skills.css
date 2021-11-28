@@ -1,0 +1,58 @@
+.skills {
+    display: flex;
+    flex-direction: row;
+    max-width: 1127px;
+    /*height: 595px;*/
+    /*Размещение по центру страницы*/
+    /*margin: 0px auto;*/
+    /*border-radius: 30px;*/
+    background: black;
+    color: white;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.skills-adder {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.skill {
+
+}
+
+.skill__upper-part, .skill__lower-part {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    justify-content: space-between;
+}
+
+.skill__button-delete {
+    background-image: url("../res/minus.png");
+    background-size: cover;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.skills-adder__button-add {
+    background-image: url("../res/plus.png");
+    background-size: cover;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.skills-adder__input {
+    display: flex;
+    flex-direction: column;
+}

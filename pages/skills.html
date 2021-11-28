@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills</title>
+    <link rel="stylesheet" href="../styles/skills.css">
+    <script defer src="../scripts/skills.js"></script>
+</head>
+<body>
+<div class="skills">
+    <div class="skills-list">
+        <h1>Coding skills</h1>
+        <div class="skill">
+            <div class="skill__upper-part">
+                <p class="skill__name">JavaScript</p>
+                <p class="skill__ratio">95%</p>
+            </div>
+            <div class="skill__lower-part">
+                <progress class="skill__bar" max="100" value="75"></progress>
+                <div class="skill__button-delete"></div>
+            </div>
+        </div>
+    </div>
+
+    <form class="skills-adder" method="post" action="">
+        <div class="skills-adder__button-add"></div>
+        <label class="skills-adder__input">
+            <input class="skills-adder__input-name" type="text" placeholder="skill name"/>
+            <input class="skills-adder__input-ratio"
+                   type="number"
+                   min="0"
+                   max="100"
+                   placeholder="skill ratio"/>
+        </label>
+    </form>
+</div>
+</body>
+</html>
