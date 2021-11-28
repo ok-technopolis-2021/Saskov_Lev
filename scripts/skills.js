@@ -3,6 +3,14 @@
 const skillsList = document.querySelector('.skills-list');
 let addedSkillsNames = [];
 
+// function clearError(form) {
+//     form.removeChild(form.querySelector(".error-msg"));
+// }
+//
+// function showError(errorMsg) {
+//     let error = document.
+// }
+
 class Skill {
     #name = "No name";
     #ratio = 0;
@@ -37,24 +45,32 @@ class Skill {
     }
 }
 
-const addButton = document.querySelector('.skills-adder__button-add');
+const visibilityButton = document.querySelector('.skills-adder__button-visibility');
+const addForm = document.querySelector('.skills-adder__form');
 
-addButton.addEventListener("click", (event) => {
-    //Потом эту функцию переделать на открытие input-ов
+visibilityButton.addEventListener("click", () => {
+    if (addForm.style.visibility === "visible") {
+        addForm.style.visibility = "hidden";
+    } else {
+        addForm.style.visibility = "visible";
+    }
+});
+
+addForm.addEventListener("submit", (event) => {
+    event.preventDefault();
     const name = document.querySelector('.skills-adder__input-name').value;
     const ratio = document.querySelector('.skills-adder__input-ratio').value;
 
     if (!name || !ratio) {
-        console.log("Вы ввели пустое значение");
+        addForm.insertAdjacentText("beforeend", "Вы ввели пустое значение!");
         return;
     }
 
     if (addedSkillsNames.includes(name)) {
-        console.log("Такой уже есть");
+        addForm.insertAdjacentText("beforeend","Такой уже есть!");
         return;
     }
 
     const skill = new Skill(name, ratio);
     skill.addToPage();
-    console.log("Added");
 });

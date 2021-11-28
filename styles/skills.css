@@ -25,10 +25,6 @@
     width: 50%;
 }
 
-.skill {
-
-}
-
 .skill__upper-part, .skill__lower-part {
     display: flex;
     flex-direction: row;
@@ -44,12 +40,16 @@
     height: 35px;
 }
 
-.skills-adder__button-add {
+.skills-adder__button-visibility {
     background-image: url("../res/plus.png");
     background-size: cover;
     border-radius: 50%;
     width: 40px;
     height: 40px;
+}
+
+.skills-adder__form {
+    visibility: hidden;
 }
 
 .skills-adder__input {
