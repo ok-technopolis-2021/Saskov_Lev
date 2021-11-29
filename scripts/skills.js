@@ -1,30 +1,29 @@
 "use strict";
 
-const skillsList = document.querySelector('.skills-list');
-let addedSkillsNames = [];
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
 
-// function clearError(form) {
-//     form.removeChild(form.querySelector(".error-msg"));
-// }
-//
-// function showError(errorMsg) {
-//     let error = document.
-// }
+const skillsList = document.querySelector('.skills-list');
+const addedSkillsNames = [];
+
 
 class Skill {
     #name = "No name";
     #ratio = 0;
 
     constructor(name, ratio) {
-        this.#name = name;
+        this.#name = replaceAll(name, '<', '&lt');
+        this.#name = replaceAll(this.#name, '>', '&gt');
         this.#ratio = ratio;
     }
 
     addToPage() {
         skillsList.insertAdjacentHTML('beforeend', this.#createHTML());
         skillsList.lastElementChild.querySelector('.skill__button-delete')
-            .addEventListener("click", (event) => {
+            .addEventListener("click", () => {
                     skillsList.removeChild(skillsList.lastElementChild);
+                    addedSkillsNames.splice(addedSkillsNames.indexOf(this.#name), 1);
                 }
             );
         addedSkillsNames.push(this.#name);
@@ -56,18 +55,29 @@ visibilityButton.addEventListener("click", () => {
     }
 });
 
+const errorBlock = addForm.querySelector('.error-block');
+
 addForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (errorBlock.textContent) {
+        errorBlock.textContent = "";
+    }
+
     const name = document.querySelector('.skills-adder__input-name').value;
     const ratio = document.querySelector('.skills-adder__input-ratio').value;
 
+    if (ratio < 0 || ratio > 100) {
+        errorBlock.textContent = "Рейтинг должен быть от 0 до 100!";
+        return;
+    }
+
     if (!name || !ratio) {
-        addForm.insertAdjacentText("beforeend", "Вы ввели пустое значение!");
+        errorBlock.textContent = "Вы ввели пустое значение!";
         return;
     }
 
     if (addedSkillsNames.includes(name)) {
-        addForm.insertAdjacentText("beforeend","Такой уже есть!");
+        errorBlock.textContent = "Такой уже есть!";
         return;
     }
 
