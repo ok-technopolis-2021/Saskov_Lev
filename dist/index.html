@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- endinject -->
+</head>
+<body>
+<div class="skills">
+    <div class="skills-list">
+        <h1>Coding skills</h1>
+    </div>
+
+    <div class="skills-adder">
+        <div class="skills-adder__button-visibility"></div>
+        <form class="skills-adder__form" method="post" action="">
+            <label class="skills-adder__input">
+                <input class="skills-adder__input-name" type="text" placeholder="skill name"/>
+                <input class="skills-adder__input-ratio"
+                       type="number"
+                       placeholder="skill ratio"/>
+                <input type="submit" hidden/>
+            </label>
+            <div class="error-block">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- inject:js -->
+<script src="./app.js"></script>
+<!-- endinject -->
+</body>
+</html>
